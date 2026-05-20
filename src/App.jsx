@@ -31,6 +31,25 @@ export default function Portfolio() {
         'RESTful API for task management with authentication and role-based authorization.',
       tech: 'Web API, Entity Framework, JWT',
     },
+    {
+    title: 'Shared Housing Real Estate API',
+    description:
+      'Backend API system for a shared housing and real estate platform, including property listings, room rentals, user authentication, booking management, and role-based access control.',
+    tech: 'ASP.NET Core Web API, Entity Framework, SQL Server, JWT, Identity',
+    },
+    {
+    title: 'Home Services Platform',
+    description:
+      'Full backend system for a home services platform that connects users with service providers for cleaning, maintenance, plumbing, electrical work, and home repairs with booking and user management features.',
+    tech: 'ASP.NET Core Web API, SQL Server, Entity Framework, Identity, JWT',
+    },
+    {
+    title: 'Gym & Fitness Management API',
+    description:
+      'Contributed to building scalable backend APIs for a gym and fitness platform focused on workout programs, muscle-building plans, membership management, trainer scheduling, and user progress tracking.',
+    tech: 'ASP.NET Core Web API, Entity Framework, SQL Server, JWT, Identity',
+    },
+
   ];
 
   const skills = [
@@ -39,10 +58,14 @@ export default function Portfolio() {
     'Entity Framework',
     'SQL Server',
     'Identity',
+    'JWT',
     'REST APIs',
     'C#',
     'LINQ',
     'Git & GitHub',
+    'Html & CSS & JS',
+    'OOP'
+
   ];
 
   return (
@@ -161,17 +184,27 @@ export default function Portfolio() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-gray-800 bg-gradient-to-br from-gray-900 to-gray-950 p-8 shadow-2xl">
-            <h3 className="mb-6 text-2xl font-bold text-blue-400">
-              نبذة مختصرة
-            </h3>
+        <div className="rounded-3xl border border-gray-300 bg-white p-8 shadow-2xl transition-all duration-500 dark:border-blue-500 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-950">
 
-            <p className="leading-8 text-gray-300">
-              مطور Backend متخصص في تقنيات .NET مع خبرة في بناء Web APIs
-              وتطبيقات احترافية باستخدام ASP.NET Core وEntity Framework وSQL
-              Server مع الاهتمام ببناء أنظمة قابلة للتوسع وكتابة Clean Code.
-            </p>
-          </div>
+        <h3
+        dir="rtl"
+        className="mb-6 text-right text-2xl font-bold text-blue-500 dark:text-blue-400"
+        >
+        نبذة مختصرة
+        </h3>
+
+        <p
+        dir="rtl"
+        className="leading-8 text-right text-gray-700 dark:text-gray-300"
+        >
+        مطور Backend متخصص في تقنيات ‎.NET‎، أمتلك خبرة في بناء
+        Web APIs وتطوير تطبيقات احترافية باستخدام
+        ASP.NET Core وEntity Framework وSQL Server،
+        مع التركيز على بناء أنظمة قابلة للتوسع واتباع مبادئ
+        Clean Code وSoftware Architecture الحديثة.
+        </p>
+
+        </div>
         </div>
       </section>
 
@@ -188,7 +221,7 @@ export default function Portfolio() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="rounded-3xl border border-gray-800 bg-gray-900/60 p-6 text-center text-lg font-semibold shadow-lg transition hover:-translate-y-2 hover:border-blue-500 hover:shadow-blue-500/10"
+              className="rounded-3xl border border-gray-800 bg-white-900/60 p-6 text-center text-lg font-semibold shadow-lg transition hover:-translate-y-2 hover:border-blue-500 hover:shadow-blue-500/10"
             >
               {skill}
             </div>
@@ -209,7 +242,7 @@ export default function Portfolio() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-3xl border border-gray-800 bg-gradient-to-b from-gray-900 to-black p-8 shadow-2xl transition hover:-translate-y-2 hover:border-blue-500"
+              className="rounded-3xl border border-gray-200 bg-gray-100 p-8 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-blue-500 dark:border-blue-800 dark:bg-gradient-to-b dark:from-gray-900 dark:to-black"
             >
               <h3 className="mb-4 text-2xl font-bold">{project.title}</h3>
 
@@ -217,8 +250,7 @@ export default function Portfolio() {
                 {project.description}
               </p>
 
-              <div className="rounded-xl bg-blue-500/10 p-3 text-sm text-blue-400">
-                {project.tech}
+            <div className="rounded-xl bg-blue-500/10 p-3 text-sm text-black dark:text-blue-400">                {project.tech}
               </div>
             </div>
           ))}
